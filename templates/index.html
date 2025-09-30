@@ -1,0 +1,19 @@
+<!--- index.html (dentro de templates/) --->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Primera pagina FLASK</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bienvenido a mi aplicación FLASK</h1>
+    <h2>Tu IP es: {{ ip }}</h2>
+
+    <h2>Información del Sistema</h2>
+    <ul>
+        {% for key, value in so.items() %}
+            <li><b>{{ key }}:</b> {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
